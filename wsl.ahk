@@ -1,11 +1,9 @@
 #f::
-	Run, C:\Users\Tawsif\f.bat
+    Run, "C:\Program Files\VcXsrv\vcxsrv.exe" -nodecoration
+    Run, "C:\Windows\System32\bash.exe",, Hide
 Return
 
 #d::
-	Run, C:\Users\Tawsif\d.bat
-Return
-
-#s::
-	Run, C:\Users\Tawsif\s.bat
+    RunWait, taskkill /im vcxsrv.exe /f /t,, Hide
+    RunWait, taskkill /im bash.exe,, Hide
 Return
